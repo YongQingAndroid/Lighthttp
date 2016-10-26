@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\dell\.gradle\caches\modules-2\files-2.1\eu.codlab\greendao\3.0.1\befd5c22c5472ef70f63755fcaca060c1f23d969\greendao-3.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="befd5c22c5472ef70f63755fcaca060c1f23d969">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\greendao-3.0.1_58e973da1d3f4eb2e4ad17916677143634d4f84c.jar" />
+    </item>
+    <item
+        jar="D:\space\Lighthttp\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\io.reactivex-rxandroid-1.1.0_a7e86af76949081107dce3051baa258b4527fe52.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.0\748f0546d5c3c27f1aef07270ffea0c45f0c42a4\rxjava-1.1.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="748f0546d5c3c27f1aef07270ffea0c45f0c42a4">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\rxjava-1.1.0_db592c49532146c35f184be9fc31a029e1a53f17.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_9d48a170875e4d524a0e10058072c1697a5f7a90.jar" />
+    </item>
+    <item
+        jar="D:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\gson-2.2.4_4bdf16c588ee034599c4d23163c8cca82363c4cb.jar" />
+    </item>
+    <item
+        jar="D:\space\Lighthttp\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.3.0_bc797a54eebcad134cd2cd834e8046eaff640148.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\.gradle\caches\modules-2\files-2.1\com.alibaba\fastjson\1.2.20\8d1796b13513f1c16287848a0792241fe10b56b0\fastjson-1.2.20.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8d1796b13513f1c16287848a0792241fe10b56b0">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\fastjson-1.2.20_c0e71316465539085e2795f1414cffbf847904e8.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.10.0\c4b316c469df09d8b5b173def1dfd79881a38310\okio-1.10.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c4b316c469df09d8b5b173def1dfd79881a38310">
+        <dex dex="D:\space\Lighthttp\app\build\intermediates\pre-dexed\debug\okio-1.10.0_3cc8ca00d3901e170b78b944db49cd3dcba1ba89.jar" />
+    </item>
+
+</items>
