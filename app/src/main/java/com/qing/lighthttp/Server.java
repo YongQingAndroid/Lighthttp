@@ -1,4 +1,5 @@
 package com.qing.lighthttp;
+import com.qing.lighthttplibrary.LightCall;
 import com.qing.lighthttplibrary.annotation.LightHttpGet;
 import java.util.List;
 import rx.Observable;
@@ -9,4 +10,6 @@ import rx.Observable;
 public interface Server {
     @LightHttpGet("login.php")
     Observable<List<People>> getdata();
+    @LightHttpGet("login.php")
+    LightCall<List<People>> getDefultData();
 }

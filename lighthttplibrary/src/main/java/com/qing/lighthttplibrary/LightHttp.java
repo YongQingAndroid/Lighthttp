@@ -2,7 +2,6 @@ package com.qing.lighthttplibrary;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Type;
 import okhttp3.Response;
-
 /**
  * This network framework is based on the production of okhttp
  * Network framework free open source, and the final right to interpret the author.
