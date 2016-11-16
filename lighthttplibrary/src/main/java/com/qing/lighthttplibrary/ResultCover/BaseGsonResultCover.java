@@ -1,8 +1,10 @@
 package com.qing.lighthttplibrary.ResultCover;
+
 import com.google.gson.Gson;
 import com.qing.lighthttplibrary.LightHttp;
 
 import java.lang.reflect.Type;
+
 import okhttp3.Response;
 
 /**
@@ -16,7 +18,7 @@ import okhttp3.Response;
  */
 public class BaseGsonResultCover implements LightHttp.LightHttpCover {
     @Override
-    public Object just(Response mObject, Type type)throws Exception{
+    public Object just(Response mObject, Type type,Object expandValue)throws Exception{
         return new Gson().fromJson(mObject.body().string(),type);
     }
     public static BaseGsonResultCover creat(){

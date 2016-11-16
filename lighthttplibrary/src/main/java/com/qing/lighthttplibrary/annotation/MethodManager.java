@@ -29,7 +29,8 @@ public class MethodManager {
     private String url;
     private Method method;
     private Object[] arg;
-    private boolean ispost=false;
+    private String soapxml="";
+    private boolean ispost=false,isSoap=false;
     public MethodManager(String url,Method method ,Object[] arg){
         this.url=url;
         this.method=method;
@@ -52,6 +53,12 @@ public class MethodManager {
                 builder.get();
             }else if(item instanceof LightHttpStream){
 
+            }else if(item instanceof LightHeard){
+                LightHeard mLightHeard=((LightHeard)item);
+                builder.addHeader(mLightHeard.key(),mLightHeard.value());
+
+            }else if (item instanceof LightHttpSoapXmlElement) {
+                soapxml=((LightHttpSoapXmlElement)item).value();
             }
         }
     }
@@ -87,6 +94,13 @@ public class MethodManager {
                 String json=new Gson().toJson(arg[i]);
                 RequestBody mRequestBody=RequestBody.create(MediaType.parse("application/json; charset=utf-8"),json);
                 builder.post(mRequestBody);
+            }else if(mAnnotation instanceof LightSoapBody){
+                if(!ispost){
+                    throw new ArithmeticException("is not have post title");
+                }
+                isSoap=true;
+                RequestBody mRequestBody=RequestBody.create(MediaType.parse("text/plain; charset=utf-8"),String.valueOf(arg[i]));
+                builder.post(mRequestBody);
             }
         }
     }
@@ -113,6 +127,13 @@ public class MethodManager {
     }
     public okhttp3.Request getHttpRequest(){
         Log.i(LightHttp.TAG,"url ="+url);
+        if(isSoap){
+            builder.addHeader("Content-Type","text/xml;charset=UTF-8");
+        }
         return builder.url(url).build();
+    }
+
+    public String getSoapxml() {
+        return soapxml;
     }
 }

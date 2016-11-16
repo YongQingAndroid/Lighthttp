@@ -23,7 +23,7 @@ public class BaseStreamResultCover implements LightHttp.LightHttpCover {
     protected File file;
     protected static String defult_file = "/sdcard/lighthttp/";
     @Override
-    public Object just(Response mObject, Type type)throws Exception{
+    public Object just(Response mObject, Type type,Object expandValue)throws Exception{
         InputStream inputStream = mObject.body().byteStream();
         FileOutputStream fileOutputStream = new FileOutputStream(file == null ? new File(defult_file + "defult") : new File(defult_file + file));
         byte[] buffer = new byte[1024*3];

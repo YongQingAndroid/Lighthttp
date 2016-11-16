@@ -1,7 +1,10 @@
 package com.qing.lighthttplibrary;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Type;
+
 import okhttp3.Response;
+
 /**
  * This network framework is based on the production of okhttp
  * Network framework free open source, and the final right to interpret the author.
@@ -23,7 +26,7 @@ public  class LightHttp {
     public <T>T  creat (Class<T> myclass){
         InvocationHandler handler=new PraseJsonHandler(builder);
         Object ob=java.lang.reflect.Proxy.newProxyInstance(myclass.getClassLoader(), new Class<?>[] { myclass}, handler);
-    return (T) ob;
+        return (T) ob;
 }
     public static final class Builder{
         private String msrc;
@@ -59,7 +62,7 @@ public  class LightHttp {
 
     }
    public interface LightHttpCover <T>{
-      T just(Response mObject, Type type) throws Exception;
+      T just(Response mObject, Type type, Object expandValue) throws Exception;
    }
    public interface LightAdapterCover<M>{
        M adapter(Type type, LightHttpRequest mRequest);

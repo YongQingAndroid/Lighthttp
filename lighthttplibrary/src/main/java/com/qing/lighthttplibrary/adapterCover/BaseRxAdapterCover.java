@@ -1,4 +1,5 @@
 package com.qing.lighthttplibrary.adapterCover;
+
 import com.qing.lighthttplibrary.LightHttp;
 import com.qing.lighthttplibrary.LightHttpRequest;
 
@@ -29,9 +30,11 @@ public class BaseRxAdapterCover implements LightHttp.LightAdapterCover<Observabl
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         try{
-                            subscriber.onNext(mRequest.getCover().just(response,type));
+                            subscriber.onNext(mRequest.getCover().just(response,type,mRequest.getSoapElement()));
                         }catch (Throwable e){
                             subscriber.onError(e);
+                        }finally {
+                            subscriber.onCompleted();
                         }
                     }
                 });
