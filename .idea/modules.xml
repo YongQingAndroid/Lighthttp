@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Lighthttp.iml" filepath="$PROJECT_DIR$/Lighthttp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lighthttplibrary/lighthttplibrary.iml" filepath="$PROJECT_DIR$/lighthttplibrary/lighthttplibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lightui/lightui.iml" filepath="$PROJECT_DIR$/lightui/lightui.iml" />
     </modules>
   </component>
 </project>
