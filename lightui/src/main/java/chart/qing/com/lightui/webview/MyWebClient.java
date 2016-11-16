@@ -12,7 +12,8 @@ import android.webkit.WebViewClient;
  */
 public class MyWebClient extends WebViewClient {
     private Activity context;
-    public MyWebClient(Activity context){
+    private LightWebView.WebViewPageFinished callback;
+    public MyWebClient(Activity context, LightWebView.WebViewPageFinished callback){
         this.context=context;
     }
     @Override
@@ -28,7 +29,9 @@ public class MyWebClient extends WebViewClient {
 
     @Override
     public void onPageFinished(WebView view, String url) {
-        Log.e("qing","onPageFinished");
+        if(callback!=null){
+            callback.onFinished(view, url);
+        }
         super.onPageFinished(view, url);
     }
 }

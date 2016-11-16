@@ -5,11 +5,19 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.webkit.WebView;
 /**
- * Created by dell on 2016/11/16.
+ * Modified release based on native webview,
+ * Support web location and function interoperability, support tell, file tags
+ *Support JS popups support log output, support the right decision
+ * My open source community account is fengling136
+ * Welcome attention
+ * Thanks for your use
+ * the power by ZYQ
  */
 public class LightWebView extends WebView{
+    private Activity context;
     public LightWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        initSeting();
     }
     private void initSeting(){
         this.getSettings().setJavaScriptEnabled(true);
@@ -23,7 +31,13 @@ public class LightWebView extends WebView{
         this.getSettings().setGeolocationDatabasePath(dir);
     }
     public void inItWebView(Activity context){
-       this.setWebViewClient(new MyWebClient(context));
-       this.setWebChromeClient(new MyWebChromeClient(context));
+        this.context=context;
+    }
+    public void setWebViewPageFinished(WebViewPageFinished callback){
+        this.setWebViewClient(new MyWebClient(context,callback));
+        this.setWebChromeClient(new MyWebChromeClient(context));
+    }
+    public interface WebViewPageFinished{
+        void onFinished(WebView view, String url);
     }
 }
